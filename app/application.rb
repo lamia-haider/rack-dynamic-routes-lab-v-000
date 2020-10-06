@@ -14,6 +14,7 @@ class Application
       end
       if item_detail
         resp.write item_detail.price
+      else resp.write "Item not found"
       end
 
     else
