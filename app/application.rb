@@ -9,7 +9,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      resp.write " "
+      item = req.path.split("/items/")
       binding.pry
     else
       resp.write "Route not found"
