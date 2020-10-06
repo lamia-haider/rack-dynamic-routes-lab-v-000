@@ -12,8 +12,8 @@ class Application
       item = req.path.split("/items/").last
       item_detail = @@items.find do |i| i.name == item
         resp.write item_detail.price
-        binding.pry
       end
+      binding.pry
 
     else
       resp.write "Route not found"
