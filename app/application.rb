@@ -1,10 +1,13 @@
 class Application
 
+  @@items = []
+
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path=="/item/"
+    if req.path.match(/items/)
+      binding.pry
       resp.write ""
     else
       resp.write "Route not found"
