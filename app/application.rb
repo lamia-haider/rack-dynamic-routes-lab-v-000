@@ -10,6 +10,7 @@ class Application
 
     if req.path.match(/items/)
       resp.write " "
+      binding.pry
     else
       resp.write "Route not found"
       resp.status = 404
@@ -17,5 +18,4 @@ class Application
 
     resp.finish
   end
-  binding.pry
 end
